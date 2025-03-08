@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8faf9;
+    color: #37342f;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #37342f;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    color: #f8faf9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.container {
+    max-width: 1349px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    min-height: 600px;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Alternating Colors */
+.hero, .projects, .contact {
+    background-color: #f8faf9;
+    color: #37342f;
+}
+
+.hero h1, .hero h2, .projects h2, .contact h2 {
+    color: #37342f;
+}
+
+.about, .experience {
+    background-color: #37342f;
+    color: #f8faf9;
+}
+
+.about h2, .experience h2 {
+    color: #f8faf9;
+}
+
+/* Hero Section */
+.hero .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #37342f;
+    color: #f8faf9;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.hero .btn {
+    background-color: #37342f;
+    color: #f8faf9;
+}
+
+/* Project Section */
+.projects {
+    text-align: center;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.tech-stack {
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.tech-stack img {
+    height: 40px;
+    margin: 0 15px;
+    animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #37342f;
+    border-radius: 5px;
+    background-color: #f8faf9;
+    color: #37342f;
+}
+
+.contact button {
+    background-color: #37342f;
+    color: #f8faf9;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .tech-stack {
+        flex-wrap: nowrap;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .navbar li {
+        margin: 0 15px;
+    }
+}
+
