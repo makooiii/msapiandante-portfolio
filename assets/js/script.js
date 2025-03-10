@@ -440,8 +440,7 @@ Version      : 1.0
     }
 
 
-
-
+   
 
 
 
@@ -506,3 +505,17 @@ Version      : 1.0
     
 
 })(window.jQuery);
+
+ // Dark Mode Toggle
+ function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+
+    const logo = document.getElementById("logo"); // Get the logo element
+    const isLightMode = document.body.classList.contains("light-mode"); // Check if light mode is active
+
+    if (isLightMode) {
+        logo.src = "assets/images/my-logo-transparent-logo.webp";
+    } else {
+        logo.src = "assets/images/my-logo-white-logo.webp";
+    }
+}
