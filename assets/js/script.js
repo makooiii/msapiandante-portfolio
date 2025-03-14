@@ -487,35 +487,36 @@ Version      : 1.0
     });
 
 	/*START MAP JS*/		
-	$(".map").hide();
+	// $(".map").hide();
 	
 	/*START SHOW FUNCTION*/
-	$(".map_title").on('click', function(){
-	$(".map").show(500);
-	$(".map_title").hide(500);
-	});
+	// $(".map_title").on('click', function(){
+	// $(".map").show(500);
+	// $(".map_title").hide(500);
+	// });
 
 	/*START HIDE FUNCTION*/
-	$(".close_btn").on('click', function(){
-		$(".map").hide(500);
-		$(".map_title").show(500);
-	});
+	// $(".close_btn").on('click', function(){
+	// 	$(".map").hide(500);
+	// 	$(".map_title").show(500);
+	// });
 	/*END MAP JS*/
 
     
 
 })(window.jQuery);
 
+
  // Dark Mode Toggle
- function toggleTheme() {
-    document.body.classList.toggle('light-mode');
+//  function toggleTheme() {
+//     document.body.classList.toggle('light-mode');
 
-    const logo = document.getElementById("logo"); // Get the logo element
-    const isLightMode = document.body.classList.contains("light-mode"); // Check if light mode is active
+//     const logo = document.getElementById("logo"); // Get the logo element
+//     const isLightMode = document.body.classList.contains("light-mode"); // Check if light mode is active
 
-    if (isLightMode) {
-        logo.src = "assets/images/my-logo-transparent-logo.webp";
-    } else {
-        logo.src = "assets/images/my-logo-white-logo.webp";
-    }
-}
+//     if (isLightMode) {
+//         logo.src = "assets/images/my-logo-transparent-logo.webp";
+//     } else {
+//         logo.src = "assets/images/my-logo-white-logo.webp";
+//     }
+// }

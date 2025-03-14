@@ -30,7 +30,7 @@
 :root {
     --main-color: #fcfcfc;
     --heading-color: #000;
-    --primary-color: #448C74;
+    --primary-color: rgb(0, 220, 130);
     --lighter-color: #444;
     --subtitle-color: #444;
     --black-color: #fafafa;
@@ -44,7 +44,8 @@
     --transition: background-color .3s cubic-bezier(.645, .045, .355, 1);
     --dark-text: #0a0a0a;
     --sub-bg: #e1e1e1;
-    --body-bg: #f3f3f3
+    --body-bg: #f3f3f3;
+    --system-ui-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 }
 
 
@@ -63,18 +64,22 @@ body {
     font-weight: 400;
     line-height: 30px;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
     overflow-x: hidden;
 
 }
 
 
+  
+
+
 /* DARK MODE TOGGLE */
 
-.theme-toggle {
-    position: absolute; /* Changed to absolute positioning */
-    top: 20px; /* Distance from top */
-    right: 20px; /* Distance from right */
+/* .theme-toggle {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
     width: 60px;
     height: 30px;
     background: var(--background-color);
@@ -83,10 +88,10 @@ body {
     cursor: pointer;
     padding: 0;
     overflow: hidden;
-    z-index: 1000; /* Ensures it stays above other content */
-}
+    z-index: 1000;
+} */
 
-.toggle-icon {
+/* .toggle-icon {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -95,10 +100,10 @@ body {
     left: 4px;
     top: 3px;
     transition: all 0.3s ease;
-}
+} */
 
 /* Moon shape (dark mode) - full circle */
-.toggle-icon::before {
+/* .toggle-icon::before {
     content: '';
     position: absolute;
     width: 0;
@@ -108,10 +113,10 @@ body {
     top: 12px;
     left: 12px;
     transition: all 0.3s ease;
-}
+} */
 
 /* Light mode styles */
-.light-mode {
+/* .light-mode {
     --text-color: var(--dark-text);
     --background-color: var(--sub-bg);
     --body-background: var(--body-bg);
@@ -119,10 +124,10 @@ body {
 
 .light-mode .toggle-icon {
     transform: translateX(30px);
-}
+} */
 
 /* Sun shape (light mode) - crescent */
-.light-mode .toggle-icon::before {
+/* .light-mode .toggle-icon::before {
     width: 18px;
     height: 18px;
     left: 8px;
@@ -131,7 +136,8 @@ body {
 
 .theme-toggle:hover {
     opacity: 0.9;
-}
+} */
+
 
 
 
@@ -155,7 +161,8 @@ h6,
 .h6,
 .accordion-item .accordion-button {
     color: var(--text-color);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
 }
 
 h1,
@@ -219,7 +226,8 @@ a {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
 }
 
 a:hover,
@@ -480,38 +488,64 @@ html {
     color: var(--primary-color);
 }
 
-.theme-btn {
-    background: var(--primary-color);
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    border: 1px solid var(--button-border);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    overflow: visible;
-    border-radius: 15px;
-    padding: 12px 24px;
+
+
+
+
+
+/* THEME BUTTON */
+
+.theme-btn, .slick-arrow, .about-social ul li a  {
+    line-height: 1.8rem;
+    border-radius: 9.5px;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    position: relative;
+    background-color: #18181b;
+    color: #f4f4f5;
+    transition: background-color 0.2s ease-in-out;
+    justify-content: center;
     text-align: center;
-    text-transform: none;
-    -webkit-transition: .3s;
-    transition: .3s
-}
+    cursor: pointer; /* Not included according to website */
+  }
+  
+  .theme-btn:hover, .slick-arrow:hover, .slick-arrow:focus, .about-social ul li a:hover, .about-social ul li a:focus  {
+    color: var(--main-color);
+    background-color: #0c0c0d;
+  }
+  
+  .theme-btn:before, .slick-arrow:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      rgb(0, 220, 130),
+      rgb(54, 228, 218),
+      rgb(22, 167, 158)
+    );
+    inset: -2px;
+    z-index: -1;
+    border-radius: 12.5px;
+    transition: all 0.2s ease 0s;
+  }
+  
+  .theme-btn:hover:before, .slick-arrow:before {
+    box-shadow: rgba(0, 220, 130, 0.5) 0px 0px 10px 0px,
+      rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
+  }
+  
+  .theme-btn > span {
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+  }
+  
 
-
-.menu-btns a.theme-btn {
-	background: transparent;
-	border: 2px solid var(--text-color);
-	color: var(--text-color);
-}
-
-.menu-btns a.theme-btn:hover {
-    background: var(--primary-color);
-	color: var(--text-color);
-	border: 1px var(--primary-color);
-}
-
-.theme-btn:focus {
+/* .theme-btn:focus {
     text-decoration: none;
     -webkit-transition: .3s;
     transition: .3s
@@ -533,7 +567,7 @@ html {
 .theme-btn:active {
     box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
     outline: 0;
-}
+} */
 
 
 .details-btn {
@@ -744,7 +778,7 @@ html {
     color: #AB6034;
 }
 
-.slick-arrow {
+/* .slick-arrow {
     width: 40px;
     height: 40px;
     color: #fff;
@@ -761,7 +795,7 @@ html {
     color: #fff;
     background: #000;
     border-color: var(--primary-color);
-}
+} */
 
 .slider-arrows button:first-child {
     margin-right: 5px;
@@ -931,9 +965,9 @@ html {
     text-transform: uppercase;
 }
 
-.innerpage-single-area {
+/* .innerpage-single-area {
     padding-top: 115px !important;
-}
+} */
 
 /*
 * ----------------------------------------------------------------------------------------
@@ -1337,7 +1371,7 @@ html {
 
 .about-content-part,
 .about-content-part-bottom {
-    padding: 40px;
+    padding: 49px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
@@ -1431,12 +1465,12 @@ color: transparent;
     margin: 0px 15px;
 }
 
-.about-social ul li a {
+/* .about-social ul li a {
     font-size: 20px;
     border: 1px solid var(--text-color);
     padding: 10px 12px;
     border-radius: 10px;
-}
+} */
 
 .about-image-part .dot-shape {
     position: absolute;
@@ -1614,8 +1648,8 @@ color: transparent;
 * ----------------------------------------------------------------------------------------
 */
 .skill-area {
-	padding-top: 100px;
-	padding-bottom: 70px;
+	padding-top: 30px;
+	padding-bottom: 15px;
 }
 
 .skill-item {
@@ -1640,7 +1674,8 @@ color: transparent;
     display: block;
     font-size: 20px;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
     color: var(--black-color);
 }
 
@@ -2055,12 +2090,14 @@ ul.extra-skills li i {
 .pd-info-item span {
     display: block;
     color: var(--lighter-color);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
 }
 
 .pd-info-item h5 {
     color: var(--lighter-color);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
     y: "Syne", sans-serif;
 }
 
@@ -2204,7 +2241,8 @@ ul.extra-skills li i {
     font-size: 38px;
     font-weight: 500;
     color: var(--primary-color);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--system-ui-font);
+    /* font-family: "Poppins", sans-serif; */
 }
 
 
@@ -2417,7 +2455,7 @@ color: #fff;
 }
 
 .contact-content-part {
-    padding: 50px 30px 20px 40px;
+    padding: 50px 30px 40px 40px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
 }
