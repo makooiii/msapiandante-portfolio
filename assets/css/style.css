@@ -24,6 +24,8 @@
 * 01.GLOBAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --main-color: #fcfcfc;
   --heading-color: #000;
@@ -42,8 +44,7 @@
   --dark-text: #0a0a0a;
   --sub-bg: #e1e1e1;
   --body-bg: #f3f3f3;
-  --system-ui-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --system-ui-font: "Outfit", sans-serif;
 }
 
 * {
@@ -61,73 +62,8 @@ body {
   line-height: 30px;
   font-size: 16px;
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
   overflow-x: hidden;
 }
-
-/* DARK MODE TOGGLE */
-
-/* .theme-toggle {
-    position: absolute; 
-    top: 20px; 
-    right: 20px;
-    width: 60px;
-    height: 30px;
-    background: var(--background-color);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1000;
-} */
-
-/* .toggle-icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: var(--text-color);
-    border-radius: 50%;
-    left: 4px;
-    top: 3px;
-    transition: all 0.3s ease;
-} */
-
-/* Moon shape (dark mode) - full circle */
-/* .toggle-icon::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: var(--body-background);
-    border-radius: 50%;
-    top: 12px;
-    left: 12px;
-    transition: all 0.3s ease;
-} */
-
-/* Light mode styles */
-/* .light-mode {
-    --text-color: var(--dark-text);
-    --background-color: var(--sub-bg);
-    --body-background: var(--body-bg);
-}
-
-.light-mode .toggle-icon {
-    transform: translateX(30px);
-} */
-
-/* Sun shape (light mode) - crescent */
-/* .light-mode .toggle-icon::before {
-    width: 18px;
-    height: 18px;
-    left: 8px;
-    top: 3px;
-}
-
-.theme-toggle:hover {
-    opacity: 0.9;
-} */
 
 .heading,
 input,
@@ -147,12 +83,30 @@ h5,
 .h5,
 h6,
 .h6,
+.mil-h3,
 .accordion-item .accordion-button {
   color: var(--text-color);
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
 }
 
+.mil-h3 {
+  font-size: 42px;
+}
+@media screen and (max-width: 1200px) {
+  .mil-h3 {
+    font-size: 39px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .mil-h3 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mil-h3 {
+    font-size: 30px;
+  }
+}
 h1,
 .h1 {
   font-size: 58px;
@@ -214,7 +168,6 @@ a {
   transition: 0.5s;
   text-decoration: none;
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
 }
 
 a:hover,
@@ -530,30 +483,6 @@ html {
   word-break: break-all;
 }
 
-/* .theme-btn:focus {
-    text-decoration: none;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-.theme-btn i {
-    margin-left: 4px;
-}
-
-.theme-btn:hover {
-    border: 1px solid var(--button-border);
-    text-decoration: none;
-    color: var(--heading-color);
-    -webkit-transition: .3s;
-    transition: .3s;
-    background: var(--text-color);
-}
-
-.theme-btn:active {
-    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-    outline: 0;
-} */
-
 .details-btn {
   width: 50px;
   height: 50px;
@@ -655,7 +584,7 @@ html {
   line-height: 30px;
   border-radius: 50%;
   text-align: center;
-  font-family: "Font Awesome 5 Pro";
+  font-family: var(--system-ui-font);
 }
 
 .list-style-two li:not(:last-child) {
@@ -757,30 +686,8 @@ html {
   color: #ab6034;
 }
 
-/* .slick-arrow {
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    line-height: 40px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    border: 1px solid var(--button-border);
-}
-
-.slick-arrow:focus,
-.slick-arrow:hover {
-    color: #fff;
-    background: #000;
-    border-color: var(--primary-color);
-} */
-
 .slider-arrows button:first-child {
   margin-right: 5px;
-}
-
-.slider-arrows button:last-child {
 }
 
 /*** Slick Dots ***/
@@ -1294,8 +1201,6 @@ html {
   background-color: var(--background-color);
 }
 
-.about-content-part {
-}
 .about-image-part2 {
   margin-bottom: 30px;
 }
@@ -1309,14 +1214,14 @@ html {
   background-color: var(--background-color);
 }
 
-.about-content-part,
-.about-content-part-bottom {
+.about-content-part {
   padding: 53px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset,
     rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
   background-color: var(--background-color);
+  height: 100%;
 }
 
 .about-content-part-bottom {
@@ -1345,11 +1250,6 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-}
-
-.about-content-part h2 span {
-  -webkit-text-stroke: 1px var(--text-color);
-  color: transparent;
 }
 
 .circle-icon {
@@ -1461,13 +1361,13 @@ html {
 
 .scroller[data-animated="true"] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(
+  /* -webkit-mask: linear-gradient(
     90deg,
     transparent,
     white 20%,
     white 80%,
     transparent
-  );
+  ); */
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
@@ -1586,10 +1486,13 @@ html {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-align: center;
-  margin-bottom: 30px;
   border-radius: 14px;
   padding: 25px;
   border: 1px solid var(--border-color);
+}
+
+.skill-item img {
+  width: 55px;
 }
 
 .skill-item h5 {
@@ -1605,7 +1508,6 @@ html {
   font-size: 20px;
   font-weight: 600;
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
   color: var(--black-color);
 }
 
@@ -1655,6 +1557,7 @@ ul.extra-skills li i {
   box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset,
     rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
   background-color: var(--background-color);
+  height: 100%;
 }
 
 .experience-list {
@@ -1705,44 +1608,6 @@ ul.extra-skills li i {
 .resume-item .content .company {
   color: var(--text-color);
   font-size: 16px;
-}
-
-.skill-item {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  text-align: center;
-  margin-bottom: 30px;
-  border-radius: 14px;
-  padding: 25px;
-  border: 1px solid var(--border-color);
-}
-
-.skill-item h5 {
-  margin-top: 15px;
-  margin-bottom: 16px;
-}
-
-.skill-item .percent {
-  padding: 10px;
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  line-height: 1.2;
-  border-radius: 14px;
-  background: var(--primary-color);
-  /* font-family: "DM Sans", sans-serif; */
-  color: #fff;
-}
-
-.skill-item:hover {
-  border-color: var(--primary-color);
-}
-
-.skill-item:hover .percent {
-  color: #fff;
-  background: var(--black-color);
 }
 
 /*
@@ -2011,13 +1876,11 @@ ul.extra-skills li i {
   display: block;
   color: var(--lighter-color);
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
 }
 
 .pd-info-item h5 {
   color: var(--lighter-color);
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
   y: "Syne", sans-serif;
 }
 
@@ -2151,7 +2014,6 @@ ul.extra-skills li i {
   font-weight: 500;
   color: var(--primary-color);
   font-family: var(--system-ui-font);
-  /* font-family: "Poppins", sans-serif; */
 }
 
 .pricing-item .pricing-header .price:before {
@@ -2462,12 +2324,6 @@ ul.extra-skills li i {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-.call-to-action-part h2 span {
-  -webkit-text-stroke: 1px var(--text-color);
-  color: transparent;
-}
-.footer-bottom {
-}
 
 .footer-bottom .copyright-text {
   color: var(--text-color);
@@ -2495,42 +2351,74 @@ body.loaded {
   height: 100% !important;
 }
 
-.preloader {
+/* -------------------------------------------
+
+preloader
+
+------------------------------------------- */
+.mil-preloader {
   position: fixed;
-  z-index: 10;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  z-index: 99999999999999;
+}
+.mil-preloader .mil-preloader-animation {
+  opacity: 0;
+  position: relative;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+}
+.mil-preloader .mil-preloader-animation .mil-pos-abs {
+  position: absolute;
   height: 100vh;
   width: 100%;
-  left: 0;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: transparent;
-  z-index: 99999999999999;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-
-.preloader svg {
+.mil-preloader .mil-preloader-animation .mil-pos-abs p {
+  opacity: 0;
+  margin-right: 15px;
+}
+@media screen and (max-width: 992px) {
+  .mil-preloader .mil-preloader-animation .mil-pos-abs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .mil-preloader .mil-preloader-animation .mil-pos-abs p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.mil-preloader .mil-preloader-animation .mil-pos-abs .mil-reveal-frame {
+  position: relative;
+  padding: 0 30px;
+}
+.mil-preloader
+  .mil-preloader-animation
+  .mil-pos-abs
+  .mil-reveal-frame
+  .mil-reveal-box {
+  z-index: 4;
   position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 110vh;
-  fill: var(--tj-black-2);
+  opacity: 0;
+  height: 100%;
+  background-color: rgb(255, 152, 0);
 }
-
-.preloader .preloader-heading .load-text {
-  font-size: 20px;
-  font-weight: 200;
-  letter-spacing: 15px;
-  color: #fff;
-  text-transform: uppercase;
-  z-index: 20;
+.mil-preloader.mil-hidden {
+  pointer-events: none;
 }
 
 .load-text span {
@@ -2728,7 +2616,7 @@ body.loaded {
   display: block;
   padding: 10px 0px;
   color: var(--white-color);
-  font-family: var(--title-font);
+  font-family: var(--system-ui-font);
   font-size: 40px;
   font-weight: 600;
   line-height: 1.3;
@@ -2740,7 +2628,7 @@ body.loaded {
   font-size: 13px;
   text-transform: uppercase;
   color: var(--primary-color);
-  font-family: var(--text-font);
+  font-family: var(--system-ui-font);
 }
 
 .blog-category {
