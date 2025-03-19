@@ -92,21 +92,25 @@ h6,
 .mil-h3 {
   font-size: 42px;
 }
+
 @media screen and (max-width: 1200px) {
   .mil-h3 {
     font-size: 39px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .mil-h3 {
     font-size: 36px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .mil-h3 {
     font-size: 30px;
   }
 }
+
 h1,
 .h1 {
   font-size: 58px;
@@ -387,7 +391,7 @@ html {
   margin-right: 0;
 }
 
-.no-gap > div {
+.no-gap>div {
   padding-left: 0;
   padding-right: 0;
 }
@@ -440,7 +444,8 @@ html {
   transition: background-color 0.2s ease-in-out;
   justify-content: center;
   text-align: center;
-  cursor: pointer; /* Not included according to website */
+  cursor: pointer;
+  /* Not included according to website */
 }
 
 .theme-btn:hover,
@@ -456,12 +461,10 @@ html {
 .slick-arrow:before {
   content: "";
   position: absolute;
-  background: linear-gradient(
-    to right,
-    rgb(0, 220, 130),
-    rgb(54, 228, 218),
-    rgb(22, 167, 158)
-  );
+  background: linear-gradient(to right,
+      rgb(0, 220, 130),
+      rgb(54, 228, 218),
+      rgb(22, 167, 158));
   inset: -2px;
   z-index: -1;
   border-radius: 12.5px;
@@ -474,7 +477,7 @@ html {
     rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
 }
 
-.theme-btn > span {
+.theme-btn>span {
   text-align: left;
   overflow: hidden;
   display: -webkit-box;
@@ -821,7 +824,7 @@ html {
   text-decoration: underline;
 }
 
-.breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+.breadcrumb .breadcrumb-item+.breadcrumb-item:before {
   margin-left: 20px;
   margin-right: 20px;
   -webkit-box-flex: 0;
@@ -954,7 +957,7 @@ html {
   padding: 0px;
 }
 
-.main-menu .navbar-collapse > ul {
+.main-menu .navbar-collapse>ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1204,6 +1207,7 @@ html {
 .about-image-part2 {
   margin-bottom: 30px;
 }
+
 .about-image-part {
   text-align: center;
   padding: 40px;
@@ -1280,12 +1284,13 @@ html {
   top: 50%;
   left: -12px;
 }
+
 .circle-icon {
   animation-direction: reverse;
   animation-duration: 38s;
 }
-.adress-field ul li {
-}
+
+.adress-field ul li {}
 
 .adress-field ul li i {
   color: #448c74;
@@ -1374,8 +1379,7 @@ html {
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
-    var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller[data-direction="right"] {
@@ -1520,8 +1524,7 @@ html {
   background: var(--black-color);
 }
 
-.extra-skills {
-}
+.extra-skills {}
 
 .extra-skills ul {
   margin-top: 30px;
@@ -1573,9 +1576,11 @@ ul.extra-skills li i {
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
 .resume-item:last-child {
   border-bottom: 0;
 }
+
 .resume-item .icon {
   -webkit-box-flex: 0;
   -ms-flex: none;
@@ -1641,12 +1646,15 @@ ul.extra-skills li i {
 .single-info h3 {
   font-size: 20px;
 }
+
 .single-image {
   margin-bottom: 30px;
 }
+
 .single-info {
   padding-bottom: 30px;
 }
+
 .single-info:last-child {
   padding-bottom: 0px;
 }
@@ -1668,8 +1676,7 @@ ul.extra-skills li i {
   width: 100%;
 }
 
-.project-content {
-}
+.project-content {}
 
 .project-content .sub-title {
   margin-bottom: 0;
@@ -2066,10 +2073,12 @@ ul.extra-skills li i {
 .client-logo-area {
   padding-top: 100px;
 }
+
 .client-logo-wrap .client-logo-item {
   width: calc(20% - 60px);
   margin: 0 30px 70px;
 }
+
 .client-logo-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2093,6 +2102,7 @@ ul.extra-skills li i {
 .map_area {
   margin-top: 40px;
 }
+
 .map_title,
 .close_btn {
   background: var(--background-color);
@@ -2110,19 +2120,22 @@ ul.extra-skills li i {
   color: transparent;
   -webkit-text-stroke: 1px var(--text-color);
 }
+
 .map_title:hover,
 .close_btn:hover {
   background: #000;
   color: #fff;
 }
-.map {
-}
+
+.map {}
+
 .map iframe {
   width: 100%;
   height: 400px;
   border: 0px;
   margin-bottom: -8px;
 }
+
 .contact-area {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2313,9 +2326,11 @@ ul.extra-skills li i {
     rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
   background-color: var(--background-color);
 }
+
 .call-to-action-area {
   padding-top: 15px;
 }
+
 .call-to-action-part h2 {
   font-size: 40px;
   line-height: 50px;
@@ -2366,12 +2381,14 @@ preloader
   background-color: rgb(0, 0, 0);
   z-index: 99999999999999;
 }
+
 .mil-preloader .mil-preloader-animation {
   opacity: 0;
   position: relative;
   height: 100vh;
   color: rgb(255, 255, 255);
 }
+
 .mil-preloader .mil-preloader-animation .mil-pos-abs {
   position: absolute;
   height: 100vh;
@@ -2386,10 +2403,12 @@ preloader
   -ms-flex-align: center;
   align-items: center;
 }
+
 .mil-preloader .mil-preloader-animation .mil-pos-abs p {
   opacity: 0;
   margin-right: 15px;
 }
+
 @media screen and (max-width: 992px) {
   .mil-preloader .mil-preloader-animation .mil-pos-abs {
     -webkit-box-orient: vertical;
@@ -2397,26 +2416,26 @@ preloader
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .mil-preloader .mil-preloader-animation .mil-pos-abs p {
     margin-right: 0;
     margin-bottom: 10px;
   }
 }
+
 .mil-preloader .mil-preloader-animation .mil-pos-abs .mil-reveal-frame {
   position: relative;
   padding: 0 30px;
 }
-.mil-preloader
-  .mil-preloader-animation
-  .mil-pos-abs
-  .mil-reveal-frame
-  .mil-reveal-box {
+
+.mil-preloader .mil-preloader-animation .mil-pos-abs .mil-reveal-frame .mil-reveal-box {
   z-index: 4;
   position: absolute;
   opacity: 0;
   height: 100%;
-  background-color: rgb(255, 152, 0);
+  background-color: rgba(0, 220, 130)
 }
+
 .mil-preloader.mil-hidden {
   pointer-events: none;
 }
@@ -2520,10 +2539,13 @@ preloader
 }
 
 .progress-wrap svg path {
-  stroke: var(--text-color); /* Uses text color for the SVG path */
-  stroke-width: 2; /* Adjust thickness as needed */
+  stroke: var(--text-color);
+  /* Uses text color for the SVG path */
+  stroke-width: 2;
+  /* Adjust thickness as needed */
   fill: none;
-  transition: stroke 0.3s ease; /* Smooth color transition */
+  transition: stroke 0.3s ease;
+  /* Smooth color transition */
 }
 
 .progress-wrap svg.progress-circle path {
@@ -2928,8 +2950,7 @@ ul.blog_pagination li a:hover {
   font-weight: 700;
 }
 
-.single-comment p {
-}
+.single-comment p {}
 
 .single-comment a {
   color: #fff;
@@ -3079,8 +3100,7 @@ ul.blog_pagination li a:hover {
   padding-right: 60Q;
 }
 
-.single-side-bar {
-}
+.single-side-bar {}
 
 .single-side-bar {
   -webkit-transition: 0.5s;
