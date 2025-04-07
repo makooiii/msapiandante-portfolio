@@ -377,7 +377,7 @@ Version      : 1.0
     ) {
       $.ajax({
         type: "POST",
-        url: "sendmail.php",
+        url: "../php/sendmail.php",
         data: data,
         success: function () {
           $("#contactForm .input-success").delay(500).fadeIn(1000);
